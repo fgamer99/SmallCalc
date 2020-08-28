@@ -11,22 +11,7 @@ namespace SmallCalc
     {
         public static String parseStringToSolution(String stringToParse)
         {
-            //stringToParse = cleanUpCode(stringToParse);
-            while(hasLowerBracket(stringToParse))
-            {
-                String lowestBracket = getLowestBracket(stringToParse);
-                String lowestBracketSolution = calcString(lowestBracket);
-                if(lowestBracketSolution=="Error")
-                {
-                    return "Error";
-                }
-                stringToParse = setLowestBracket(stringToParse, lowestBracketSolution);
-            }
-            stringToParse = calcString(stringToParse);
-            if (stringToParse == "Error")
-            {
-                return "Error";
-            }
+            
             return stringToParse;
         }
 
